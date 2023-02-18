@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: demoStockWeb
+  cloud:
+    nacos:
+      config:
+        server-addr: 127.0.0.1:8848
+        file-extension: yaml
+
+# TODO 配置非常关键 否则无法回滚事务，需要和服务端保持
+seata:
+  tx-service-group: default_tx_group
+  service:
+    vgroup-mapping:
+      default_tx_group: default
+    grouplist:
+      default: 127.0.0.1:8091

@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: demoOrderWeb
+  cloud:
+    nacos:
+      config:
+        server-addr: 127.0.0.1:8848
+        file-extension: yaml
+seata:
+  tx-service-group: default_tx_group
+#  service:
+#    vgroup-mapping:
+#      my_test: default
+#    grouplist:
+#      default: 127.0.0.1:8091
